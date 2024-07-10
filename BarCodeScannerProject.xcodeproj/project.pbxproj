@@ -11,14 +11,48 @@
 		710172772C3D3A22009348A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710172762C3D3A22009348A1 /* ContentView.swift */; };
 		710172792C3D3A24009348A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 710172782C3D3A24009348A1 /* Assets.xcassets */; };
 		7101727C2C3D3A24009348A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7101727B2C3D3A24009348A1 /* Preview Assets.xcassets */; };
+		710172832C3D3C04009348A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 710172822C3D3C04009348A1 /* GoogleService-Info.plist */; };
+		713470A42C3E57B50095681B /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713470A32C3E57B50095681B /* ScannerViewModel.swift */; };
+		713470A82C3E5A0E0095681B /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713470A72C3E5A0E0095681B /* QRScannerController.swift */; };
+		713470AB2C3E5B880095681B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 713470AA2C3E5B880095681B /* FirebaseAnalytics */; };
+		713470AD2C3E5B880095681B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 713470AC2C3E5B880095681B /* FirebaseAuth */; };
+		713470AF2C3E5B880095681B /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 713470AE2C3E5B880095681B /* FirebaseCrashlytics */; };
+		713470B12C3E5B880095681B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 713470B02C3E5B880095681B /* FirebaseFirestore */; };
+		713470B32C3E5B880095681B /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 713470B22C3E5B880095681B /* FirebaseRemoteConfig */; };
+		715C1F3E2C3D5499005C777A /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C1F3D2C3D5499005C777A /* ScannerView.swift */; };
+		715C1F412C3D5DE4005C777A /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 715C1F402C3D5DE4005C777A /* CodeScanner */; };
+		715C1F432C3D69DA005C777A /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C1F422C3D69DA005C777A /* QRScannerView.swift */; };
+		7172BA192C3E7A0900CD012C /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172BA182C3E7A0900CD012C /* Asset.swift */; };
+		7172BA1C2C3E7A6500CD012C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172BA1B2C3E7A6500CD012C /* Coordinator.swift */; };
+		7172BA1F2C3E8BAA00CD012C /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172BA1E2C3E8BAA00CD012C /* DateHelper.swift */; };
+		7172BA212C3E983500CD012C /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172BA202C3E983500CD012C /* FirebaseManager.swift */; };
+		7172BA232C3EE5EE00CD012C /* AddNewAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172BA222C3EE5EE00CD012C /* AddNewAssetView.swift */; };
+		7172BA252C3EE61300CD012C /* AddNewAssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172BA242C3EE61300CD012C /* AddNewAssetViewModel.swift */; };
+		71E0EEA12C3E649B003A3B69 /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E0EEA02C3E649B003A3B69 /* DetailedView.swift */; };
+		AC159CF739A2486EA6F50741 /* Pods_BarCodeScannerProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE89622A5F421BFD27A960E /* Pods_BarCodeScannerProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		077CAFBB8332839A582BF0A8 /* Pods-BarCodeScannerProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScannerProject.debug.xcconfig"; path = "Target Support Files/Pods-BarCodeScannerProject/Pods-BarCodeScannerProject.debug.xcconfig"; sourceTree = "<group>"; };
 		710172712C3D3A22009348A1 /* BarCodeScannerProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarCodeScannerProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		710172742C3D3A22009348A1 /* BarCodeScannerProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeScannerProjectApp.swift; sourceTree = "<group>"; };
 		710172762C3D3A22009348A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		710172782C3D3A24009348A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7101727B2C3D3A24009348A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		710172822C3D3C04009348A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		713470A32C3E57B50095681B /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		713470A72C3E5A0E0095681B /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
+		715C1F3D2C3D5499005C777A /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		715C1F422C3D69DA005C777A /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		7172BA182C3E7A0900CD012C /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		7172BA1B2C3E7A6500CD012C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		7172BA1E2C3E8BAA00CD012C /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		7172BA202C3E983500CD012C /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		7172BA222C3EE5EE00CD012C /* AddNewAssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAssetView.swift; sourceTree = "<group>"; };
+		7172BA242C3EE61300CD012C /* AddNewAssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAssetViewModel.swift; sourceTree = "<group>"; };
+		71E0EEA02C3E649B003A3B69 /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
+		7EC283168B338AA58C476654 /* Pods-BarCodeScannerProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScannerProject.release.xcconfig"; path = "Target Support Files/Pods-BarCodeScannerProject/Pods-BarCodeScannerProject.release.xcconfig"; sourceTree = "<group>"; };
+		EFE89622A5F421BFD27A960E /* Pods_BarCodeScannerProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarCodeScannerProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +60,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				715C1F412C3D5DE4005C777A /* CodeScanner in Frameworks */,
+				AC159CF739A2486EA6F50741 /* Pods_BarCodeScannerProject.framework in Frameworks */,
+				713470AF2C3E5B880095681B /* FirebaseCrashlytics in Frameworks */,
+				713470B32C3E5B880095681B /* FirebaseRemoteConfig in Frameworks */,
+				713470AB2C3E5B880095681B /* FirebaseAnalytics in Frameworks */,
+				713470AD2C3E5B880095681B /* FirebaseAuth in Frameworks */,
+				713470B12C3E5B880095681B /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		046D8EBFC47A877C5880CA4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				077CAFBB8332839A582BF0A8 /* Pods-BarCodeScannerProject.debug.xcconfig */,
+				7EC283168B338AA58C476654 /* Pods-BarCodeScannerProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		710172682C3D3A22009348A1 = {
 			isa = PBXGroup;
 			children = (
 				710172732C3D3A22009348A1 /* BarCodeScannerProject */,
 				710172722C3D3A22009348A1 /* Products */,
+				046D8EBFC47A877C5880CA4C /* Pods */,
+				C898B1E2BB8AC8916E3A3FC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,10 +103,20 @@
 		710172732C3D3A22009348A1 /* BarCodeScannerProject */ = {
 			isa = PBXGroup;
 			children = (
+				7172BA1A2C3E7A5200CD012C /* Coordinator */,
+				71E0EEA22C3E6643003A3B69 /* FirebaseManager */,
+				713470A62C3E59DC0095681B /* QRScannerController */,
+				713470A22C3E57990095681B /* ViewModel */,
+				715C1F3D2C3D5499005C777A /* ScannerView.swift */,
+				7172BA222C3EE5EE00CD012C /* AddNewAssetView.swift */,
+				71E0EEA02C3E649B003A3B69 /* DetailedView.swift */,
+				710172782C3D3A24009348A1 /* Assets.xcassets */,
+				710172822C3D3C04009348A1 /* GoogleService-Info.plist */,
+				7172BA1D2C3E8B9300CD012C /* Helper */,
+				7101727A2C3D3A24009348A1 /* Preview Content */,
 				710172742C3D3A22009348A1 /* BarCodeScannerProjectApp.swift */,
 				710172762C3D3A22009348A1 /* ContentView.swift */,
-				710172782C3D3A24009348A1 /* Assets.xcassets */,
-				7101727A2C3D3A24009348A1 /* Preview Content */,
+				7172BA182C3E7A0900CD012C /* Asset.swift */,
 			);
 			path = BarCodeScannerProject;
 			sourceTree = "<group>";
@@ -67,6 +129,56 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		713470A22C3E57990095681B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				713470A32C3E57B50095681B /* ScannerViewModel.swift */,
+				7172BA242C3EE61300CD012C /* AddNewAssetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		713470A62C3E59DC0095681B /* QRScannerController */ = {
+			isa = PBXGroup;
+			children = (
+				715C1F422C3D69DA005C777A /* QRScannerView.swift */,
+				713470A72C3E5A0E0095681B /* QRScannerController.swift */,
+			);
+			path = QRScannerController;
+			sourceTree = "<group>";
+		};
+		7172BA1A2C3E7A5200CD012C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7172BA1B2C3E7A6500CD012C /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7172BA1D2C3E8B9300CD012C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7172BA1E2C3E8BAA00CD012C /* DateHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		71E0EEA22C3E6643003A3B69 /* FirebaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				7172BA202C3E983500CD012C /* FirebaseManager.swift */,
+			);
+			path = FirebaseManager;
+			sourceTree = "<group>";
+		};
+		C898B1E2BB8AC8916E3A3FC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFE89622A5F421BFD27A960E /* Pods_BarCodeScannerProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +186,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7101727F2C3D3A24009348A1 /* Build configuration list for PBXNativeTarget "BarCodeScannerProject" */;
 			buildPhases = (
+				74A0BE4746FA45813473FE2E /* [CP] Check Pods Manifest.lock */,
 				7101726D2C3D3A22009348A1 /* Sources */,
 				7101726E2C3D3A22009348A1 /* Frameworks */,
 				7101726F2C3D3A22009348A1 /* Resources */,
@@ -83,6 +196,14 @@
 			dependencies = (
 			);
 			name = BarCodeScannerProject;
+			packageProductDependencies = (
+				715C1F402C3D5DE4005C777A /* CodeScanner */,
+				713470AA2C3E5B880095681B /* FirebaseAnalytics */,
+				713470AC2C3E5B880095681B /* FirebaseAuth */,
+				713470AE2C3E5B880095681B /* FirebaseCrashlytics */,
+				713470B02C3E5B880095681B /* FirebaseFirestore */,
+				713470B22C3E5B880095681B /* FirebaseRemoteConfig */,
+			);
 			productName = BarCodeScannerProject;
 			productReference = 710172712C3D3A22009348A1 /* BarCodeScannerProject.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +232,10 @@
 				Base,
 			);
 			mainGroup = 710172682C3D3A22009348A1;
+			packageReferences = (
+				715C1F3F2C3D5DE4005C777A /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				713470A92C3E5B880095681B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 710172722C3D3A22009348A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,18 +252,55 @@
 			files = (
 				7101727C2C3D3A24009348A1 /* Preview Assets.xcassets in Resources */,
 				710172792C3D3A24009348A1 /* Assets.xcassets in Resources */,
+				710172832C3D3C04009348A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74A0BE4746FA45813473FE2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BarCodeScannerProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7101726D2C3D3A22009348A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713470A42C3E57B50095681B /* ScannerViewModel.swift in Sources */,
+				715C1F3E2C3D5499005C777A /* ScannerView.swift in Sources */,
 				710172772C3D3A22009348A1 /* ContentView.swift in Sources */,
+				7172BA252C3EE61300CD012C /* AddNewAssetViewModel.swift in Sources */,
+				715C1F432C3D69DA005C777A /* QRScannerView.swift in Sources */,
+				7172BA212C3E983500CD012C /* FirebaseManager.swift in Sources */,
+				71E0EEA12C3E649B003A3B69 /* DetailedView.swift in Sources */,
+				7172BA1F2C3E8BAA00CD012C /* DateHelper.swift in Sources */,
 				710172752C3D3A22009348A1 /* BarCodeScannerProjectApp.swift in Sources */,
+				7172BA192C3E7A0900CD012C /* Asset.swift in Sources */,
+				713470A82C3E5A0E0095681B /* QRScannerController.swift in Sources */,
+				7172BA232C3EE5EE00CD012C /* AddNewAssetView.swift in Sources */,
+				7172BA1C2C3E7A6500CD012C /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,19 +428,23 @@
 		};
 		710172802C3D3A24009348A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 077CAFBB8332839A582BF0A8 /* Pods-BarCodeScannerProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BarCodeScannerProject/Preview Content\"";
+				DEVELOPMENT_TEAM = 2P7R4H9ZM8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera for scanning QR code.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,19 +460,23 @@
 		};
 		710172812C3D3A24009348A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EC283168B338AA58C476654 /* Pods-BarCodeScannerProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BarCodeScannerProject/Preview Content\"";
+				DEVELOPMENT_TEAM = 2P7R4H9ZM8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera for scanning QR code.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,6 +512,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		713470A92C3E5B880095681B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.29.0;
+			};
+		};
+		715C1F3F2C3D5DE4005C777A /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		713470AA2C3E5B880095681B /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 713470A92C3E5B880095681B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		713470AC2C3E5B880095681B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 713470A92C3E5B880095681B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		713470AE2C3E5B880095681B /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 713470A92C3E5B880095681B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		713470B02C3E5B880095681B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 713470A92C3E5B880095681B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		713470B22C3E5B880095681B /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 713470A92C3E5B880095681B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		715C1F402C3D5DE4005C777A /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 715C1F3F2C3D5DE4005C777A /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 710172692C3D3A22009348A1 /* Project object */;
 }
