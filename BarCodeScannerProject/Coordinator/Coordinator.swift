@@ -6,32 +6,35 @@
 //
 
 import Foundation
-import Foundation
 import AVFoundation
 import SwiftUI
 
-class Coordinator: NSObject, AVCaptureMetadataOutputObjectsDelegate {
-    @Binding var scannedAssetId: String
+
+
+class Coordinator: NSObject, QRScannerControllerDelegate {
+    
+    @Binding var result: String
     @Binding var isShowing: Bool
     @Binding var navigateToDetails: Bool
     @Binding var navigateToAddAsset: Bool
+    var handleScan: (String) -> Void
 
-    init(scannedAssetId: Binding<String>, isShowing: Binding<Bool>, navigateToDetails: Binding<Bool>, navigateToAddAsset: Binding<Bool>) {
-        self._scannedAssetId = scannedAssetId
-        self._isShowing = isShowing
-        self._navigateToDetails = navigateToDetails
-        self._navigateToAddAsset = navigateToAddAsset
+    init(result: Binding<String>, isShowing: Binding<Bool>, navigateToDetails: Binding<Bool>, navigateToAddAsset: Binding<Bool>, handleScan: @escaping (String) -> Void) {
+        _result = result
+        _isShowing = isShowing
+        _navigateToDetails = navigateToDetails
+        _navigateToAddAsset = navigateToAddAsset
+        self.handleScan = handleScan
     }
 
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        if let metadataObject = metadataObjects.first {
-            guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
-            guard let stringValue = readableObject.stringValue else { return }
-            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            scannedAssetId = stringValue
-            isShowing = false
-            navigateToDetails = false
-            navigateToAddAsset = true
-        }
+    func didFindCode(code: String) {
+        result = code
+        isShowing = false
+        handleScan(code)
+    }
+
+    func didFail(reason: String) {
+        print("Failed to scan: \(reason)")
+        isShowing = false
     }
 }

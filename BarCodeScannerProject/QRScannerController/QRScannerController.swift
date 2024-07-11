@@ -9,56 +9,87 @@ import Foundation
 import UIKit
 import AVFoundation
 
-class QRScannerController: UIViewController {
-    
-    var captureSession = AVCaptureSession()
-    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-    var qrCodeFrameView: UIView?
+protocol QRScannerControllerDelegate: AnyObject {
+    func didFindCode(code: String)
+    func didFail(reason: String)
+}
 
-    weak var delegate: AVCaptureMetadataOutputObjectsDelegate?
+class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    var delegate: QRScannerControllerDelegate?
+    var captureSession: AVCaptureSession!
+    var previewLayer: AVCaptureVideoPreviewLayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Get the back-facing camera for capturing videos
-        guard let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
-            print("Failed to get the camera device")
-            return
-        }
+        captureSession = AVCaptureSession()
 
+        guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
         let videoInput: AVCaptureDeviceInput
 
         do {
-            // Get an instance of the AVCaptureDeviceInput class using the previous device object.
-            videoInput = try AVCaptureDeviceInput(device: captureDevice)
-
+            videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
         } catch {
-            // If any error occurs, simply print it out and don't continue any more.
-            print(error)
             return
         }
 
-        // Set the input device on the capture session.
-        captureSession.addInput(videoInput)
-
-        // Initialization of AVCaptureMetadataOutput object and set it as the output device to the capture session.
-        let captureMetadataOutput = AVCaptureMetadataOutput()
-        captureSession.addOutput(captureMetadataOutput)
-
-        // Setting delegate and using default dispatch queue to execute the callback
-        captureMetadataOutput.setMetadataObjectsDelegate(delegate, queue: DispatchQueue.main)
-        captureMetadataOutput.metadataObjectTypes = [ .qr ]
-
-        // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
-        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        videoPreviewLayer?.frame = view.layer.bounds
-        view.layer.addSublayer(videoPreviewLayer!)
-
-        // Start video capture.
-        DispatchQueue.global(qos: .background).async {
-            self.captureSession.startRunning()
+        if (captureSession.canAddInput(videoInput)) {
+            captureSession.addInput(videoInput)
+        } else {
+            failed()
+            return
         }
 
+        let metadataOutput = AVCaptureMetadataOutput()
+
+        if (captureSession.canAddOutput(metadataOutput)) {
+            captureSession.addOutput(metadataOutput)
+
+            metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+            metadataOutput.metadataObjectTypes = [.qr]
+        } else {
+            failed()
+            return
+        }
+
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.frame = view.layer.bounds
+        previewLayer.videoGravity = .resizeAspectFill
+        view.layer.addSublayer(previewLayer)
+
+        captureSession.startRunning()
+    }
+
+    func failed() {
+        delegate?.didFail(reason: "Scanning not supported.")
+        captureSession = nil
+    }
+
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        captureSession.stopRunning()
+
+        if let metadataObject = metadataObjects.first {
+            guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
+            guard let stringValue = readableObject.stringValue else { return }
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            delegate?.didFindCode(code: stringValue)
+        }
+    }
+
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if captureSession?.isRunning == true {
+            captureSession.stopRunning()
+        }
     }
 }
+
